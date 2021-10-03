@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+
+
+        }
+
+        header {
+            margin-bottom: 3em;
+
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        textarea{
+            resize: none;
+        }
+
+        .main-container {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            background: #1B1E32;
+            color: white;
+
+        }
+
+        .form-container {
+            padding: 40px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            margin: auto;
+            background: #21253f;
+        }
+
+        .form-container form label {
+            color: #8891cc;
+            display: block;
+            margin-bottom: 0.4em;
+        }
+
+        .form-container textarea {
+            display: block;
+            padding: 1em;
+            width: 100%;
+            margin-bottom: 2em;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: white;
+            line-height: 1.6em;
+            background: #242946;
+            border: none;
+
+        }
+
+        .form-container textarea:focus {
+            outline: 2px solid #1B1E32;
+        }
+
+
+        .form-container form input[type=submit] {
+            display: block;
+            width: 100%;
+            border: none;
+            border-radius: 0.2em;
+            padding: 0.8em 1.4em;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: white;
+            background: #EC3942;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="form-container">
+            <header>
+                <h1>Notifier v.1</h1>
+                <p>Remind your stupid friends of important things!</p>
+            </header>
+            <form>
+                <label for="inp1">Message content</label>
+                <textarea name="message" id="inp1" cols="50" rows="3" spellcheck="false"
+                    placeholder="Type your message here.." maxlength="2000" required></textarea>
+
+                <input type="submit" value="Send message">
+
+            </form>
+        </div>
+    </div>
+
+    <script src="fetch.js"></script>
+</body>
+
+</html>
