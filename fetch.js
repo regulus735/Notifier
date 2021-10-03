@@ -1,4 +1,4 @@
-const url = 'https://localhost:5001/api/reminder';
+const url = 'https://reminder-api-app.azurewebsites.net';
 const form = document.querySelector("form");
 const textareas = document.querySelectorAll("textarea");
 
