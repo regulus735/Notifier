@@ -1,4 +1,4 @@
-const url = 'http://reminder-api-app.azurewebsites.net/api/reminder',
+const url = 'https://reminder-api-app.azurewebsites.net/api/reminder',
     form = document.querySelector("form"),
     textareas = document.querySelectorAll("textarea"),
     input = document.querySelector("input[type=submit]");
