@@ -1,6 +1,8 @@
-const url = 'https://reminder-api-app.azurewebsites.net/api/reminder';
-const form = document.querySelector("form");
-const textareas = document.querySelectorAll("textarea");
+const url = 'http://reminder-api-app.azurewebsites.net/api/reminder',
+    form = document.querySelector("form"),
+    textareas = document.querySelectorAll("textarea"),
+    input = document.querySelector("input[type=submit]");
+
 
 const toJSONString = () => {
     let data = {};
@@ -15,8 +17,14 @@ const toJSONString = () => {
     return data;
 }
 
+const changeInput = (color) => {
+    input.disabled = !input.disabled;
+    input.style.backgroundColor = color;
+}
+
 form.addEventListener("submit", function (e) {
     e.preventDefault();
+    changeInput('#ec7c81');
 
     fetch(url, {
         method: "Post",
@@ -29,10 +37,10 @@ form.addEventListener("submit", function (e) {
     })
         .then(() => {
             textareas.forEach(e => e.value = "");
+            changeInput('#EC3942')
         })
         .catch((error) => {
             console.error("Error:", error);
+            changeInput('#EC3942')
         });
-
-
 })
